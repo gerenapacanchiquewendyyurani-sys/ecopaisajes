@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- CONJUNTO 1: CONFIGURACIÓN -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paisajes Naturales</title>
+  <link rel="stylesheet" href="./bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- VIDEO DE FONDO -->
+  <video class="video-fondo" autoplay muted loop playsinline>
+    <source src="_medium.mp4" type="video/mp4">
+  </video>
+
+  <div class="capa-video"></div>
+
+
+  <!-- CONJUNTO 2: NAVEGACIÓN -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid container">
+
+      <a class="navbar-brand" href="#">🏔️ EcoPaisajes</a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-label="Abrir menú">
+
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="#inicio">Inicio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#galeria">Galería</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- CONJUNTO 3: CONTENIDO PRINCIPAL -->
+  <main class="container my-4">
+
+    <!-- CONJUNTO 4: INICIO -->
+    <section id="inicio" class="row mb-5 fade-in-animation">
+
+      <div class="col-12 col-md-4 mb-3">
+
+        <div class="p-3 bg-white rounded shadow-sm h-100">
+
+          <h1 class="h4 text-primary">
+            El Paisaje Natural
+          </h1>
+
+          <p>
+            Un paisaje natural es un espacio geográfico que se ha formado
+            exclusivamente a través de procesos biológicos y físicos,
+            sin sufrir modificaciones significativas por la mano del hombre.
+          </p>
+
+        </div>
+      </div>
+
+
+      <!-- CONJUNTO 5: CARRUSEL -->
+      <div class="col-12 col-md-4 mb-3">
+
+        <div class="carousel slide shadow-sm"
+          id="carouselPaisajes"
+          data-bs-ride="carousel">
+
+          <div class="carousel-indicators">
+
+            <button class="active"
+              type="button"
+              data-bs-target="#carouselPaisajes"
+              data-bs-slide-to="0"
+              aria-label="Imagen 1">
+            </button>
+
+            <button
+              type="button"
+              data-bs-target="#carouselPaisajes"
+              data-bs-slide-to="1"
+              aria-label="Imagen 2">
+            </button>
+
+            <button
+              type="button"
+              data-bs-target="#carouselPaisajes"
+              data-bs-slide-to="2"
+              aria-label="Imagen 3">
+            </button>
+
+          </div>
+
+
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+
+              <img class="d-block w-100"
+                src="1.jpg"
+                alt="Paisaje natural">
+
+              <div class="carousel-caption d-none d-md-block">
+
+                <h2>Naturales</h2>
+
+                <p>
+                  Sin intervención humana.
+                </p>
+
+              </div>
+            </div>
+
+
+            <div class="carousel-item">
+
+              <img class="d-block w-100"
+                src="2.jpeg"
+                alt="Paisaje cultural">
+
+              <div class="carousel-caption d-none d-md-block">
+
+                <h2>Culturales</h2>
+
+                <p>
+                  Transformados por el hombre.
+                </p>
+
+              </div>
+            </div>
+
+
+            <div class="carousel-item">
+
+              <img class="d-block w-100"
+                src="3.jpg"
+                alt="Paisaje rural">
+
+              <div class="carousel-caption d-none d-md-block">
+
+                <h2>Rurales</h2>
+
+                <p>
+                  Campos y zonas agrícolas.
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+
+
+          <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselPaisajes"
+            data-bs-slide="prev"
+            aria-label="Imagen anterior">
+
+            <span class="carousel-control-prev-icon"></span>
+
+          </button>
+
+
+          <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselPaisajes"
+            data-bs-slide="next"
+            aria-label="Imagen siguiente">
+
+            <span class="carousel-control-next-icon"></span>
+
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- CONJUNTO 6: FORMULARIO -->
+      <div class="col-12 col-md-4 mb-3" id="contacto">
+
+        <form action="#" class="shadow-sm">
+
+          <h2 class="h5 mb-3">
+            Boletín Informativo
+          </h2>
+
+          <div class="mb-3">
+
+            <label class="form-label" for="formEmail">
+              Correo electrónico
+            </label>
+
+            <input class="form-control"
+              type="email"
+              placeholder="nombre@ejemplo.com"
+              id="formEmail"
+              required>
+
+          </div>
+
+
+          <div class="mb-3">
+
+            <label class="form-label" for="formPassword">
+              Qué quieres conocer
+            </label>
+
+            <input class="form-control"
+              type="text"
+              placeholder="Conocer más"
+              id="formPassword"
+              required>
+
+          </div>
+
+
+          <button type="submit"
+            class="btn btn-primary w-100 custom-btn">
+
+            Suscribirse
+
+          </button>
+
+        </form>
+      </div>
+
+    </section>
+
+
+    <!-- CONJUNTO 7: GALERÍA -->
+    <section id="galeria"
+      class="row mb-5 align-items-center">
+
+      <div class="col-12 col-md-6 mb-3">
+
+        <h2 class="visually-hidden">
+          Galería de paisajes
+        </h2>
+
+        <img class="img-fluid rounded hover-zoom shadow"
+          src="0.jpg"
+          alt="Bicicleta en paisaje">
+
+      </div>
+
+
+      <div class="col-12 col-md-6 mb-3">
+
+        <div class="card shadow-sm custom-card">
+
+          <div class="card-header text-white fw-bold">
+            Exploración al aire libre
+          </div>
+
+          <div class="card-body">
+
+            <p class="card-text">
+              Montar en bicicleta o hacer senderismo en entornos naturales
+              nos reconecta con el medio ambiente y mejora nuestra salud
+              mental y física.
+            </p>
+
+          </div>
+
+          <div class="card-footer text-muted">
+            Actualizado recientemente
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- CONJUNTO 8: BANNER -->
+    <section class="row"
+      aria-labelledby="titulo-banner">
+
+      <div class="col-12">
+
+        <div class="banner-highlight p-4 text-center text-white rounded shadow">
+
+          <h2 id="titulo-banner" class="m-0">
+            "Los paisajes capturan la belleza de la naturaleza y la paz que transmite."
+          </h2>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- CONJUNTO 9: FOOTER -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+
+    <div class="container">
+
+      <p class="m-0">
+        &copy; 2026 EcoPaisajes - Todos los derechos reservados.
+      </p>
+
+      <small class="text-muted">
+        Desarrollado para la entrega académica de Maquetación Web.
+      </small>
+
+    </div>
+
+  </footer>
+
+
+  <!-- CONJUNTO 10: JAVASCRIPT -->
+  <script src="./bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

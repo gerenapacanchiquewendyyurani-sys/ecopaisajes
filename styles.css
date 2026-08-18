@@ -1,0 +1,490 @@
+/* =====================================================
+   CONJUNTO 1: VIDEO Y ESTILOS GENERALES
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: transparent;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #263746;
+    min-height: 100vh;
+}
+
+/* VIDEO DE FONDO */
+.video-fondo {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* CAPA SOBRE EL VIDEO */
+.capa-video {
+    position: fixed;
+    inset: 0;
+    background: rgba(23, 35, 45, 0.55);
+    z-index: -1;
+}
+
+
+/* =====================================================
+   CONJUNTO 2: TIPOGRAFÍA
+   ===================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+p {
+    line-height: 1.7;
+}
+
+.nav-link,
+button,
+input,
+label {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+
+/* =====================================================
+   CONJUNTO 3: BARRA DE NAVEGACIÓN
+   ===================================================== */
+
+.navbar {
+    background: linear-gradient(
+        90deg,
+        #17232D,
+        #263746,
+        #304F3B
+    ) !important;
+
+    box-shadow: 0 4px 18px
+        rgba(23, 35, 45, 0.35);
+}
+
+.navbar-brand {
+    color: #F4C95D !important;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #E98B3A !important;
+    transform: scale(1.06);
+}
+
+.nav-link {
+    position: relative;
+    margin: 0 6px;
+    font-weight: 500;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #F4C95D !important;
+    transform: translateY(-2px);
+}
+
+
+/* Línea animada debajo del menú */
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+
+    background-color: #E98B3A;
+
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   CONJUNTO 4: ANIMACIÓN DE ENTRADA
+   ===================================================== */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-animation {
+    animation: aparecer 1s ease-out;
+}
+
+
+/* =====================================================
+   CONJUNTO 5: TARJETA DEL PAISAJE
+   ===================================================== */
+
+.p-3 {
+    background: rgba(255, 255, 255, 0.94) !important;
+
+    border-left: 5px solid #304F3B;
+    border-radius: 12px;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.p-3:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 14px 28px
+        rgba(23, 35, 45, 0.20) !important;
+}
+
+.text-primary {
+    color: #304F3B !important;
+}
+
+
+/* =====================================================
+   CONJUNTO 6: CARRUSEL
+   ===================================================== */
+
+.carousel {
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 25px
+        rgba(23, 35, 45, 0.30);
+}
+
+.carousel img {
+    height: 230px;
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.05);
+}
+
+.carousel-caption {
+    background: rgba(23, 35, 45, 0.78);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.carousel-caption h2 {
+    color: #F4C95D;
+}
+
+
+/* =====================================================
+   CONJUNTO 7: FORMULARIO
+   ===================================================== */
+
+form {
+    background: rgba(255, 244, 223, 0.96);
+
+    padding: 20px;
+    border-radius: 14px;
+
+    border-top: 5px solid #E98B3A;
+
+    box-shadow:
+        0 8px 22px
+        rgba(23, 35, 45, 0.15);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+form:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(23, 35, 45, 0.23);
+}
+
+.form-control {
+    border: 2px solid #C9DDE5;
+    border-radius: 8px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #2D8CCB;
+
+    box-shadow:
+        0 0 8px
+        rgba(45, 140, 203, 0.35);
+}
+
+
+/* =====================================================
+   CONJUNTO 8: BOTÓN
+   ===================================================== */
+
+.custom-btn {
+    background: linear-gradient(
+        90deg,
+        #E98B3A,
+        #F4C95D
+    );
+
+    color: #17232D;
+    border: none;
+    font-weight: bold;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(
+        90deg,
+        #F4C95D,
+        #E98B3A
+    );
+
+    color: #17232D;
+
+    transform: translateY(-3px) scale(1.02);
+
+    box-shadow:
+        0 8px 18px
+        rgba(233, 139, 58, 0.40);
+}
+
+
+/* =====================================================
+   CONJUNTO 9: IMAGEN DE GALERÍA
+   ===================================================== */
+
+.hover-zoom {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+    border-radius: 15px !important;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 15px 30px
+        rgba(23, 35, 45, 0.30) !important;
+}
+
+
+/* =====================================================
+   CONJUNTO 10: TARJETA DE EXPLORACIÓN
+   ===================================================== */
+
+.custom-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 20px
+        rgba(23, 35, 45, 0.16);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(23, 35, 45, 0.25);
+}
+
+.custom-card .card-header {
+    background: linear-gradient(
+        90deg,
+        #304F3B,
+        #1E3528
+    );
+}
+
+.custom-card .card-footer {
+    background-color: #E8F1F5;
+}
+
+
+/* =====================================================
+   CONJUNTO 11: BANNER ANIMADO
+   ===================================================== */
+
+.banner-highlight {
+    background: linear-gradient(
+        135deg,
+        #17232D,
+        #304F3B,
+        #E98B3A,
+        #F4C95D
+    );
+
+    background-size: 300% 300%;
+
+    animation:
+        movimientoFondo 7s ease infinite;
+}
+
+.banner-highlight h2 {
+    font-weight: normal;
+
+    text-shadow:
+        2px 2px 5px
+        rgba(0, 0, 0, 0.35);
+}
+
+
+/* Movimiento del degradado */
+
+@keyframes movimientoFondo {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =====================================================
+   CONJUNTO 12: FOOTER
+   ===================================================== */
+
+footer {
+    background: linear-gradient(
+        90deg,
+        #17232D,
+        #1E3528
+    ) !important;
+}
+
+footer p {
+    color: #F4C95D;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+}
+
+footer small {
+    color: #A9D4EA !important;
+}
+
+
+/* =====================================================
+   CONJUNTO 13: EFECTO EN SECCIONES
+   ===================================================== */
+
+section {
+    transition:
+        transform 0.4s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   CONJUNTO 14: DISEÑO RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .carousel img,
+    .hover-zoom {
+        height: 180px;
+    }
+
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .banner-highlight h2 {
+        font-size: 1.2rem;
+    }
+
+    body {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* =====================================================
+   CONJUNTO 15: REDUCIR ANIMACIONES SI ES NECESARIO
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
