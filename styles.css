@@ -19,65 +19,27 @@ body {
     min-height: 100vh;
 }
 
-
-/* =====================================================
-   VIDEO DE FONDO
-   ===================================================== */
-
+/* VIDEO DE FONDO */
 .video-fondo {
     position: fixed;
-    top: 0;
-    left: 0;
-
+    inset: 0;
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     z-index: -2;
-
-    pointer-events: none;
 }
 
-
-/* CAPA OSCURA SOBRE EL VIDEO */
-
+/* CAPA SOBRE EL VIDEO */
 .capa-video {
     position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
+    inset: 0;
     background: rgba(23, 35, 45, 0.55);
-
     z-index: -1;
-
-    pointer-events: none;
 }
 
 
 /* =====================================================
-   CONJUNTO 2: PALETA DE COLORES
-   ===================================================== */
-
-/*
-   PALETA BASADA EN LAS FOTOS
-
-   Azul cielo       #2D8CCB
-   Azul claro       #A9D4EA
-   Azul oscuro      #17232D
-   Verde naturaleza #304F3B
-   Verde oscuro     #1E3528
-   Naranja          #E98B3A
-   Dorado           #F4C95D
-   Crema            #FFF4DF
-*/
-
-
-/* =====================================================
-   CONJUNTO 3: TIPOGRAFÍA
+   CONJUNTO 2: TIPOGRAFÍA
    ===================================================== */
 
 h1,
@@ -87,12 +49,6 @@ h4,
 h5,
 .navbar-brand {
     font-family: Georgia, "Times New Roman", serif;
-}
-
-h1,
-h2,
-h3 {
-    letter-spacing: 0.5px;
 }
 
 p {
@@ -108,7 +64,7 @@ label {
 
 
 /* =====================================================
-   CONJUNTO 4: BARRA DE NAVEGACIÓN
+   CONJUNTO 3: BARRA DE NAVEGACIÓN
    ===================================================== */
 
 .navbar {
@@ -125,9 +81,7 @@ label {
 
 .navbar-brand {
     color: #F4C95D !important;
-
     font-size: 1.6rem;
-
     font-weight: bold;
 
     transition:
@@ -137,15 +91,12 @@ label {
 
 .navbar-brand:hover {
     color: #E98B3A !important;
-
     transform: scale(1.06);
 }
 
 .nav-link {
     position: relative;
-
     margin: 0 6px;
-
     font-weight: 500;
 
     transition:
@@ -155,21 +106,17 @@ label {
 
 .nav-link:hover {
     color: #F4C95D !important;
-
     transform: translateY(-2px);
 }
 
 
-/* LÍNEA ANIMADA DEL MENÚ */
+/* Línea animada debajo del menú */
 
 .nav-link::after {
     content: "";
-
     position: absolute;
-
     left: 0;
     bottom: 0;
-
     width: 0;
     height: 2px;
 
@@ -184,20 +131,18 @@ label {
 
 
 /* =====================================================
-   CONJUNTO 5: ANIMACIÓN DE ENTRADA
+   CONJUNTO 4: ANIMACIÓN DE ENTRADA
    ===================================================== */
 
 @keyframes aparecer {
 
     from {
         opacity: 0;
-
         transform: translateY(25px);
     }
 
     to {
         opacity: 1;
-
         transform: translateY(0);
     }
 }
@@ -208,14 +153,13 @@ label {
 
 
 /* =====================================================
-   CONJUNTO 6: TARJETA DEL PAISAJE NATURAL
+   CONJUNTO 5: TARJETA DEL PAISAJE
    ===================================================== */
 
 .p-3 {
     background: rgba(255, 255, 255, 0.94) !important;
 
     border-left: 5px solid #304F3B;
-
     border-radius: 12px;
 
     transition:
@@ -237,12 +181,11 @@ label {
 
 
 /* =====================================================
-   CONJUNTO 7: CARRUSEL DE PAISAJES
+   CONJUNTO 6: CARRUSEL
    ===================================================== */
 
 .carousel {
     border-radius: 15px;
-
     overflow: hidden;
 
     box-shadow:
@@ -251,10 +194,7 @@ label {
 }
 
 .carousel img {
-    width: 100%;
-
     height: 230px;
-
     object-fit: cover;
 
     transition:
@@ -266,47 +206,24 @@ label {
 }
 
 .carousel-caption {
-    background:
-        rgba(23, 35, 45, 0.78);
-
+    background: rgba(23, 35, 45, 0.78);
     border-radius: 10px;
-
     padding: 10px;
 }
 
 .carousel-caption h2 {
     color: #F4C95D;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-}
-
-
-/* INDICADORES DEL CARRUSEL */
-
-.carousel-indicators button {
-    transition:
-        transform 0.3s ease,
-        opacity 0.3s ease;
-}
-
-.carousel-indicators button:hover {
-    transform: scale(1.2);
 }
 
 
 /* =====================================================
-   CONJUNTO 8: FORMULARIO
+   CONJUNTO 7: FORMULARIO
    ===================================================== */
 
 form {
-    background:
-        rgba(255, 244, 223, 0.96);
+    background: rgba(255, 244, 223, 0.96);
 
     padding: 20px;
-
     border-radius: 14px;
 
     border-top: 5px solid #E98B3A;
@@ -328,22 +245,13 @@ form:hover {
         rgba(23, 35, 45, 0.23);
 }
 
-form h2 {
-    color: #304F3B;
-}
-
-
-/* CAMPOS */
-
 .form-control {
     border: 2px solid #C9DDE5;
-
     border-radius: 8px;
 
     transition:
         border-color 0.3s ease,
-        box-shadow 0.3s ease,
-        transform 0.3s ease;
+        box-shadow 0.3s ease;
 }
 
 .form-control:focus {
@@ -352,13 +260,11 @@ form h2 {
     box-shadow:
         0 0 8px
         rgba(45, 140, 203, 0.35);
-
-    transform: translateY(-1px);
 }
 
 
 /* =====================================================
-   CONJUNTO 9: BOTÓN
+   CONJUNTO 8: BOTÓN
    ===================================================== */
 
 .custom-btn {
@@ -369,15 +275,12 @@ form h2 {
     );
 
     color: #17232D;
-
     border: none;
-
     font-weight: bold;
 
     transition:
         transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease;
+        box-shadow 0.3s ease;
 }
 
 .custom-btn:hover {
@@ -389,31 +292,23 @@ form h2 {
 
     color: #17232D;
 
-    transform:
-        translateY(-3px)
-        scale(1.02);
+    transform: translateY(-3px) scale(1.02);
 
     box-shadow:
         0 8px 18px
         rgba(233, 139, 58, 0.40);
 }
 
-.custom-btn:active {
-    transform: scale(0.98);
-}
-
 
 /* =====================================================
-   CONJUNTO 10: IMAGEN DE GALERÍA
+   CONJUNTO 9: IMAGEN DE GALERÍA
    ===================================================== */
 
 .hover-zoom {
     width: 100%;
-
     height: 250px;
 
     object-fit: cover;
-
     border-radius: 15px !important;
 
     transition:
@@ -431,14 +326,12 @@ form h2 {
 
 
 /* =====================================================
-   CONJUNTO 11: TARJETA DE EXPLORACIÓN
+   CONJUNTO 10: TARJETA DE EXPLORACIÓN
    ===================================================== */
 
 .custom-card {
     border: none;
-
     border-radius: 15px;
-
     overflow: hidden;
 
     box-shadow:
@@ -466,18 +359,13 @@ form h2 {
     );
 }
 
-.custom-card .card-body {
-    background:
-        rgba(255, 255, 255, 0.94);
-}
-
 .custom-card .card-footer {
     background-color: #E8F1F5;
 }
 
 
 /* =====================================================
-   CONJUNTO 12: BANNER ANIMADO
+   CONJUNTO 11: BANNER ANIMADO
    ===================================================== */
 
 .banner-highlight {
@@ -496,11 +384,6 @@ form h2 {
 }
 
 .banner-highlight h2 {
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
     font-weight: normal;
 
     text-shadow:
@@ -509,7 +392,7 @@ form h2 {
 }
 
 
-/* ANIMACIÓN DEL DEGRADADO */
+/* Movimiento del degradado */
 
 @keyframes movimientoFondo {
 
@@ -528,21 +411,7 @@ form h2 {
 
 
 /* =====================================================
-   CONJUNTO 13: EFECTO EN LAS SECCIONES
-   ===================================================== */
-
-section {
-    transition:
-        transform 0.4s ease;
-}
-
-section:hover {
-    transform: translateY(-2px);
-}
-
-
-/* =====================================================
-   CONJUNTO 14: FOOTER
+   CONJUNTO 12: FOOTER
    ===================================================== */
 
 footer {
@@ -551,10 +420,6 @@ footer {
         #17232D,
         #1E3528
     ) !important;
-
-    box-shadow:
-        0 -4px 15px
-        rgba(0, 0, 0, 0.20);
 }
 
 footer p {
@@ -572,23 +437,21 @@ footer small {
 
 
 /* =====================================================
-   CONJUNTO 15: EFECTOS DE ENTRADA
+   CONJUNTO 13: EFECTO EN SECCIONES
    ===================================================== */
 
-.p-3,
-.carousel,
-form,
-.custom-card,
-.hover-zoom,
-.banner-highlight {
-    animation-duration: 0.8s;
+section {
+    transition:
+        transform 0.4s ease;
+}
 
-    animation-timing-function: ease;
+section:hover {
+    transform: translateY(-2px);
 }
 
 
 /* =====================================================
-   CONJUNTO 16: DISEÑO RESPONSIVE
+   CONJUNTO 14: DISEÑO RESPONSIVE
    ===================================================== */
 
 @media (max-width: 768px) {
@@ -609,12 +472,19 @@ form,
     body {
         font-size: 0.95rem;
     }
-
-    .p-3:hover,
-    form:hover,
-    .custom-card:hover {
-        transform: translateY(-4px);
-    }
 }
 
 
+/* =====================================================
+   CONJUNTO 15: REDUCIR ANIMACIONES SI ES NECESARIO
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
